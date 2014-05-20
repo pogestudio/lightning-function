@@ -7,8 +7,15 @@
 //
 
 #import "LFSearchWC.h"
+#import "LFFunction.h"
 
 @interface LFSearchWC ()
+
+@property (retain) IBOutlet NSTextField *input;
+@property (retain) IBOutlet NSTableView *suggestions;
+@property (retain) IBOutlet NSTextView *selectedFunction;
+
+@property (retain) NSArray *allResults;
 
 @end
 
@@ -29,5 +36,30 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
+
+#pragma mark -
+- (void)controlTextDidChange:(NSNotification *)notification
+{
+    if([notification object] == self.input)
+    {
+        NSLog(@"The contents of the text field changed");
+    }
+}
+
+#pragma mark NSTABLEVIEWDELEGATES
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return [self.allResults count];
+}
+
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
+{
+    NSAssert([[self.allResults objectAtIndex:rowIndex] isKindOfClass:[LFFunction class]], @"wrong class for tableview");
+    LFFunction *func = (LFFunction*)[self.allResults objectAtIndex:rowIndex];
+    return func.title;
+}
+
+
+#pragma mark - FETCH
 
 @end

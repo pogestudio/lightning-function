@@ -6,6 +6,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LFSearchWC">
             <connections>
+                <outlet property="input" destination="u2s-jL-dHI" id="cqV-x6-v8o"/>
+                <outlet property="selectedFunction" destination="RdP-ZV-77e" id="lcY-5o-u8t"/>
+                <outlet property="suggestions" destination="Uv4-2p-lci" id="peV-Ma-rP4"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -77,6 +80,10 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
                                     </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-2" id="5Fn-1a-zUk"/>
+                                        <outlet property="delegate" destination="-2" id="HLF-AW-97q"/>
+                                    </connections>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -97,11 +104,14 @@
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2s-jL-dHI">
                         <rect key="frame" x="22" y="340" width="283" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="Mbn-86-Vc0">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="Skriv något..." drawsBackground="YES" id="Mbn-86-Vc0">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="bc2-pD-zmf"/>
+                        </connections>
                     </textField>
                 </subviews>
             </view>

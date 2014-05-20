@@ -87,7 +87,7 @@
                         <font key="font" metaFont="controlContent"/>
                     </buttonCell>
                     <connections>
-                        <action selector="clearDatabase" target="-2" id="wUE-kl-hRo"/>
+                        <action selector="clearDatabase:" target="-2" id="N9V-Jz-hfe"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCk-qE-WWj">
@@ -98,7 +98,7 @@
                         <font key="font" metaFont="controlContent"/>
                     </buttonCell>
                     <connections>
-                        <action selector="openSearch" target="-2" id="92b-Na-aRs"/>
+                        <action selector="openSearch:" target="-2" id="inw-GF-hqd"/>
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gif-Uu-GA5">

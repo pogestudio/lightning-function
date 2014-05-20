@@ -67,7 +67,6 @@ static LFCDManager *_sharedManager;
     for (NSManagedObject * func in funcs) {
         [self.masterManagedObjectContext deleteObject:func];
     }
-    NSError *saveError = nil;
     [self saveMasterContext];
 }
 

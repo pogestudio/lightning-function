@@ -87,21 +87,6 @@
         
     }
     
-    
-    
-    
-    
-    //if it was + or -, and current is (
-    
-    //store the title
-    //start a new string
-    //then store the {
-    //store everything
-    //mark as CONTINUING_FROM_PREVIOUS_FUNC = YES
-    //until you hit +( or -( again
-    
-    //store the last letter
-    
     [self.delegate scanningIsComplete];
 }
 

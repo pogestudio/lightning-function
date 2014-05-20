@@ -49,15 +49,16 @@
     
 }
 
--(IBAction)openSearch
+-(IBAction)openSearch:(id)sender
 {
     self.searchWindow = [[LFSearchWC alloc] initWithWindowNibName:@"LFSearchWC"];
     [self.searchWindow showWindow:self];
 
 }
--(IBAction)clearDatabase
+-(IBAction)clearDatabase:(id)sender
 {
     [[LFCDManager sharedManager] deleteAllFunctions];
+    [self updateHUD];
 }
 
 -(void)prepareScreenForLoading

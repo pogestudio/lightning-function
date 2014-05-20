@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface LFSearchWC : NSWindowController
+@interface LFSearchWC : NSWindowController <NSTextFieldDelegate, NSTableViewDataSource, NSTableViewDelegate>
 
 @end
