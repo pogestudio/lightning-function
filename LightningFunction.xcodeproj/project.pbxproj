@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02134C50192B4F2A00D3E0FD /* LFInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C4E192B4F2A00D3E0FD /* LFInputVC.m */; };
+		02134C51192B4F2A00D3E0FD /* LFInputVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02134C4F192B4F2A00D3E0FD /* LFInputVC.xib */; };
+		02134C54192B531100D3E0FD /* LFCDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C53192B531100D3E0FD /* LFCDManager.m */; };
+		02134C57192B535000D3E0FD /* CDManagerSuperclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C56192B535000D3E0FD /* CDManagerSuperclass.m */; };
+		02134C61192B563E00D3E0FD /* LFFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C60192B563E00D3E0FD /* LFFunction.m */; };
+		02134C64192B576900D3E0FD /* LFFunctionScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C63192B576900D3E0FD /* LFFunctionScanner.m */; };
 		023F0F2C192B391100EBCF90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F0F2B192B391100EBCF90 /* Cocoa.framework */; };
 		023F0F36192B391100EBCF90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 023F0F34192B391100EBCF90 /* InfoPlist.strings */; };
 		023F0F38192B391100EBCF90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F0F37192B391100EBCF90 /* main.m */; };
@@ -32,6 +38,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02134C4D192B4F2A00D3E0FD /* LFInputVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFInputVC.h; sourceTree = "<group>"; };
+		02134C4E192B4F2A00D3E0FD /* LFInputVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFInputVC.m; sourceTree = "<group>"; };
+		02134C4F192B4F2A00D3E0FD /* LFInputVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFInputVC.xib; sourceTree = "<group>"; };
+		02134C52192B531100D3E0FD /* LFCDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCDManager.h; sourceTree = "<group>"; };
+		02134C53192B531100D3E0FD /* LFCDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCDManager.m; sourceTree = "<group>"; };
+		02134C55192B535000D3E0FD /* CDManagerSuperclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDManagerSuperclass.h; sourceTree = "<group>"; };
+		02134C56192B535000D3E0FD /* CDManagerSuperclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDManagerSuperclass.m; sourceTree = "<group>"; };
+		02134C5F192B563E00D3E0FD /* LFFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFunction.h; sourceTree = "<group>"; };
+		02134C60192B563E00D3E0FD /* LFFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFunction.m; sourceTree = "<group>"; };
+		02134C62192B576900D3E0FD /* LFFunctionScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFunctionScanner.h; sourceTree = "<group>"; };
+		02134C63192B576900D3E0FD /* LFFunctionScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFunctionScanner.m; sourceTree = "<group>"; };
 		023F0F28192B391100EBCF90 /* LightningFunction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightningFunction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		023F0F2B192B391100EBCF90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		023F0F2E192B391100EBCF90 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -75,6 +92,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02134C4B192B4E8000D3E0FD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				02134C58192B535700D3E0FD /* CoreData */,
+				02134C4D192B4F2A00D3E0FD /* LFInputVC.h */,
+				02134C4E192B4F2A00D3E0FD /* LFInputVC.m */,
+				02134C4F192B4F2A00D3E0FD /* LFInputVC.xib */,
+				02134C62192B576900D3E0FD /* LFFunctionScanner.h */,
+				02134C63192B576900D3E0FD /* LFFunctionScanner.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		02134C58192B535700D3E0FD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				02134C5B192B559500D3E0FD /* Generated */,
+				02134C5A192B559000D3E0FD /* Categories */,
+				02134C59192B558A00D3E0FD /* Managers */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		02134C59192B558A00D3E0FD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				02134C55192B535000D3E0FD /* CDManagerSuperclass.h */,
+				02134C56192B535000D3E0FD /* CDManagerSuperclass.m */,
+				02134C52192B531100D3E0FD /* LFCDManager.h */,
+				02134C53192B531100D3E0FD /* LFCDManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		02134C5A192B559000D3E0FD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		02134C5B192B559500D3E0FD /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				02134C5F192B563E00D3E0FD /* LFFunction.h */,
+				02134C60192B563E00D3E0FD /* LFFunction.m */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
 		023F0F1F192B391100EBCF90 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +184,7 @@
 		023F0F31192B391100EBCF90 /* LightningFunction */ = {
 			isa = PBXGroup;
 			children = (
+				02134C4B192B4E8000D3E0FD /* Classes */,
 				023F0F3D192B391100EBCF90 /* LFAppDelegate.h */,
 				023F0F3E192B391100EBCF90 /* LFAppDelegate.m */,
 				023F0F40192B391200EBCF90 /* MainMenu.xib */,
@@ -235,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				023F0F36192B391100EBCF90 /* InfoPlist.strings in Resources */,
+				02134C51192B4F2A00D3E0FD /* LFInputVC.xib in Resources */,
 				023F0F47192B391200EBCF90 /* Images.xcassets in Resources */,
 				023F0F3C192B391100EBCF90 /* Credits.rtf in Resources */,
 				023F0F42192B391200EBCF90 /* MainMenu.xib in Resources */,
@@ -256,9 +325,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02134C64192B576900D3E0FD /* LFFunctionScanner.m in Sources */,
+				02134C54192B531100D3E0FD /* LFCDManager.m in Sources */,
 				023F0F45192B391200EBCF90 /* LightningFunction.xcdatamodeld in Sources */,
+				02134C50192B4F2A00D3E0FD /* LFInputVC.m in Sources */,
+				02134C57192B535000D3E0FD /* CDManagerSuperclass.m in Sources */,
 				023F0F3F192B391100EBCF90 /* LFAppDelegate.m in Sources */,
 				023F0F38192B391100EBCF90 /* main.m in Sources */,
+				02134C61192B563E00D3E0FD /* LFFunction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +545,7 @@
 				023F0F5E192B391200EBCF90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		023F0F5F192B391200EBCF90 /* Build configuration list for PBXNativeTarget "LightningFunctionTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +554,7 @@
 				023F0F61192B391200EBCF90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,5 +1,5 @@
 //
-//  LFAppDelegate.h
+//  LFInputVC.h
 //  LightningFunction
 //
 //  Created by CAwesome on 2014-05-20.
@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "LFFunctionScanner.h"
 
-@interface LFAppDelegate : NSObject <NSApplicationDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
+@interface LFInputVC : NSViewController <ScannerReceiver>
 
 @end
