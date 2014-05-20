@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023F0F2C192B391100EBCF90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F0F2B192B391100EBCF90 /* Cocoa.framework */; };
+		023F0F36192B391100EBCF90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 023F0F34192B391100EBCF90 /* InfoPlist.strings */; };
+		023F0F38192B391100EBCF90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F0F37192B391100EBCF90 /* main.m */; };
+		023F0F3C192B391100EBCF90 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 023F0F3A192B391100EBCF90 /* Credits.rtf */; };
+		023F0F3F192B391100EBCF90 /* LFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F0F3E192B391100EBCF90 /* LFAppDelegate.m */; };
+		023F0F42192B391200EBCF90 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023F0F40192B391200EBCF90 /* MainMenu.xib */; };
+		023F0F45192B391200EBCF90 /* LightningFunction.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 023F0F43192B391200EBCF90 /* LightningFunction.xcdatamodeld */; };
+		023F0F47192B391200EBCF90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023F0F46192B391200EBCF90 /* Images.xcassets */; };
+		023F0F4E192B391200EBCF90 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F0F4D192B391200EBCF90 /* XCTest.framework */; };
+		023F0F4F192B391200EBCF90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F0F2B192B391100EBCF90 /* Cocoa.framework */; };
+		023F0F57192B391200EBCF90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 023F0F55192B391200EBCF90 /* InfoPlist.strings */; };
+		023F0F59192B391200EBCF90 /* LightningFunctionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F0F58192B391200EBCF90 /* LightningFunctionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		023F0F50192B391200EBCF90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 023F0F20192B391100EBCF90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 023F0F27192B391100EBCF90;
+			remoteInfo = LightningFunction;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		023F0F28192B391100EBCF90 /* LightningFunction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightningFunction.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		023F0F2B192B391100EBCF90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		023F0F2E192B391100EBCF90 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		023F0F2F192B391100EBCF90 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		023F0F30192B391100EBCF90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		023F0F33192B391100EBCF90 /* LightningFunction-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LightningFunction-Info.plist"; sourceTree = "<group>"; };
+		023F0F35192B391100EBCF90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		023F0F37192B391100EBCF90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		023F0F39192B391100EBCF90 /* LightningFunction-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LightningFunction-Prefix.pch"; sourceTree = "<group>"; };
+		023F0F3B192B391100EBCF90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		023F0F3D192B391100EBCF90 /* LFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFAppDelegate.h; sourceTree = "<group>"; };
+		023F0F3E192B391100EBCF90 /* LFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFAppDelegate.m; sourceTree = "<group>"; };
+		023F0F41192B391200EBCF90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		023F0F44192B391200EBCF90 /* LightningFunction.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LightningFunction.xcdatamodel; sourceTree = "<group>"; };
+		023F0F46192B391200EBCF90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		023F0F4C192B391200EBCF90 /* LightningFunctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightningFunctionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		023F0F4D192B391200EBCF90 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		023F0F54192B391200EBCF90 /* LightningFunctionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LightningFunctionTests-Info.plist"; sourceTree = "<group>"; };
+		023F0F56192B391200EBCF90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		023F0F58192B391200EBCF90 /* LightningFunctionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightningFunctionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		023F0F25192B391100EBCF90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023F0F2C192B391100EBCF90 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		023F0F49192B391200EBCF90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023F0F4F192B391200EBCF90 /* Cocoa.framework in Frameworks */,
+				023F0F4E192B391200EBCF90 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		023F0F1F192B391100EBCF90 = {
+			isa = PBXGroup;
+			children = (
+				023F0F31192B391100EBCF90 /* LightningFunction */,
+				023F0F52192B391200EBCF90 /* LightningFunctionTests */,
+				023F0F2A192B391100EBCF90 /* Frameworks */,
+				023F0F29192B391100EBCF90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		023F0F29192B391100EBCF90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				023F0F28192B391100EBCF90 /* LightningFunction.app */,
+				023F0F4C192B391200EBCF90 /* LightningFunctionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		023F0F2A192B391100EBCF90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				023F0F2B192B391100EBCF90 /* Cocoa.framework */,
+				023F0F4D192B391200EBCF90 /* XCTest.framework */,
+				023F0F2D192B391100EBCF90 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		023F0F2D192B391100EBCF90 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				023F0F2E192B391100EBCF90 /* AppKit.framework */,
+				023F0F2F192B391100EBCF90 /* CoreData.framework */,
+				023F0F30192B391100EBCF90 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		023F0F31192B391100EBCF90 /* LightningFunction */ = {
+			isa = PBXGroup;
+			children = (
+				023F0F3D192B391100EBCF90 /* LFAppDelegate.h */,
+				023F0F3E192B391100EBCF90 /* LFAppDelegate.m */,
+				023F0F40192B391200EBCF90 /* MainMenu.xib */,
+				023F0F46192B391200EBCF90 /* Images.xcassets */,
+				023F0F43192B391200EBCF90 /* LightningFunction.xcdatamodeld */,
+				023F0F32192B391100EBCF90 /* Supporting Files */,
+			);
+			path = LightningFunction;
+			sourceTree = "<group>";
+		};
+		023F0F32192B391100EBCF90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				023F0F33192B391100EBCF90 /* LightningFunction-Info.plist */,
+				023F0F34192B391100EBCF90 /* InfoPlist.strings */,
+				023F0F37192B391100EBCF90 /* main.m */,
+				023F0F39192B391100EBCF90 /* LightningFunction-Prefix.pch */,
+				023F0F3A192B391100EBCF90 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		023F0F52192B391200EBCF90 /* LightningFunctionTests */ = {
+			isa = PBXGroup;
+			children = (
+				023F0F58192B391200EBCF90 /* LightningFunctionTests.m */,
+				023F0F53192B391200EBCF90 /* Supporting Files */,
+			);
+			path = LightningFunctionTests;
+			sourceTree = "<group>";
+		};
+		023F0F53192B391200EBCF90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				023F0F54192B391200EBCF90 /* LightningFunctionTests-Info.plist */,
+				023F0F55192B391200EBCF90 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		023F0F27192B391100EBCF90 /* LightningFunction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 023F0F5C192B391200EBCF90 /* Build configuration list for PBXNativeTarget "LightningFunction" */;
+			buildPhases = (
+				023F0F24192B391100EBCF90 /* Sources */,
+				023F0F25192B391100EBCF90 /* Frameworks */,
+				023F0F26192B391100EBCF90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LightningFunction;
+			productName = LightningFunction;
+			productReference = 023F0F28192B391100EBCF90 /* LightningFunction.app */;
+			productType = "com.apple.product-type.application";
+		};
+		023F0F4B192B391200EBCF90 /* LightningFunctionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 023F0F5F192B391200EBCF90 /* Build configuration list for PBXNativeTarget "LightningFunctionTests" */;
+			buildPhases = (
+				023F0F48192B391200EBCF90 /* Sources */,
+				023F0F49192B391200EBCF90 /* Frameworks */,
+				023F0F4A192B391200EBCF90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				023F0F51192B391200EBCF90 /* PBXTargetDependency */,
+			);
+			name = LightningFunctionTests;
+			productName = LightningFunctionTests;
+			productReference = 023F0F4C192B391200EBCF90 /* LightningFunctionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		023F0F20192B391100EBCF90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LF;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = CAwesome;
+				TargetAttributes = {
+					023F0F4B192B391200EBCF90 = {
+						TestTargetID = 023F0F27192B391100EBCF90;
+					};
+				};
+			};
+			buildConfigurationList = 023F0F23192B391100EBCF90 /* Build configuration list for PBXProject "LightningFunction" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 023F0F1F192B391100EBCF90;
+			productRefGroup = 023F0F29192B391100EBCF90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				023F0F27192B391100EBCF90 /* LightningFunction */,
+				023F0F4B192B391200EBCF90 /* LightningFunctionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		023F0F26192B391100EBCF90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023F0F36192B391100EBCF90 /* InfoPlist.strings in Resources */,
+				023F0F47192B391200EBCF90 /* Images.xcassets in Resources */,
+				023F0F3C192B391100EBCF90 /* Credits.rtf in Resources */,
+				023F0F42192B391200EBCF90 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		023F0F4A192B391200EBCF90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023F0F57192B391200EBCF90 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		023F0F24192B391100EBCF90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023F0F45192B391200EBCF90 /* LightningFunction.xcdatamodeld in Sources */,
+				023F0F3F192B391100EBCF90 /* LFAppDelegate.m in Sources */,
+				023F0F38192B391100EBCF90 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		023F0F48192B391200EBCF90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023F0F59192B391200EBCF90 /* LightningFunctionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		023F0F51192B391200EBCF90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 023F0F27192B391100EBCF90 /* LightningFunction */;
+			targetProxy = 023F0F50192B391200EBCF90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		023F0F34192B391100EBCF90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				023F0F35192B391100EBCF90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		023F0F3A192B391100EBCF90 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				023F0F3B192B391100EBCF90 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		023F0F40192B391200EBCF90 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				023F0F41192B391200EBCF90 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		023F0F55192B391200EBCF90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				023F0F56192B391200EBCF90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		023F0F5A192B391200EBCF90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		023F0F5B192B391200EBCF90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		023F0F5D192B391200EBCF90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LightningFunction/LightningFunction-Prefix.pch";
+				INFOPLIST_FILE = "LightningFunction/LightningFunction-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		023F0F5E192B391200EBCF90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LightningFunction/LightningFunction-Prefix.pch";
+				INFOPLIST_FILE = "LightningFunction/LightningFunction-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		023F0F60192B391200EBCF90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LightningFunction.app/Contents/MacOS/LightningFunction";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LightningFunction/LightningFunction-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LightningFunctionTests/LightningFunctionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		023F0F61192B391200EBCF90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LightningFunction.app/Contents/MacOS/LightningFunction";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LightningFunction/LightningFunction-Prefix.pch";
+				INFOPLIST_FILE = "LightningFunctionTests/LightningFunctionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		023F0F23192B391100EBCF90 /* Build configuration list for PBXProject "LightningFunction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				023F0F5A192B391200EBCF90 /* Debug */,
+				023F0F5B192B391200EBCF90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		023F0F5C192B391200EBCF90 /* Build configuration list for PBXNativeTarget "LightningFunction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				023F0F5D192B391200EBCF90 /* Debug */,
+				023F0F5E192B391200EBCF90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		023F0F5F192B391200EBCF90 /* Build configuration list for PBXNativeTarget "LightningFunctionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				023F0F60192B391200EBCF90 /* Debug */,
+				023F0F61192B391200EBCF90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		023F0F43192B391200EBCF90 /* LightningFunction.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				023F0F44192B391200EBCF90 /* LightningFunction.xcdatamodel */,
+			);
+			currentVersion = 023F0F44192B391200EBCF90 /* LightningFunction.xcdatamodel */;
+			path = LightningFunction.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 023F0F20192B391100EBCF90 /* Project object */;
+}
