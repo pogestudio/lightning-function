@@ -13,12 +13,13 @@
 
 +(LFCDManager*)sharedManager;
 
--(id)newFunctionFromBackground;
+-(id)newFunctionFromMasterWithData:(NSDictionary*)data;
 
--(NSFetchRequest *) functionFetchFromBackground;
+-(NSFetchRequest *) functionFetchFromMaster;
 -(NSArray*)allFunctions;
 
 -(void)listAllFunctions;
+-(void)deleteAllFunctions;
 
 
 @end

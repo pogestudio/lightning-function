@@ -16,12 +16,15 @@
  body
  */
 -(void)scannedFunctionWithData:(NSDictionary*)data;
+-(void)scanningIsComplete;
 
 @end
 
 @interface LFFunctionScanner : NSObject
 
 @property (weak) id<ScannerReceiver> delegate;
+@property (assign) NSInteger amtOfFunctionsScanned;
+
 
 -(void)startScanningText:(NSString*)completeString;
 

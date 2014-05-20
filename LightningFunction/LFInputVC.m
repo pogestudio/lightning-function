@@ -7,11 +7,19 @@
 //
 
 #import "LFInputVC.h"
+#import "LFFunction+helperMethod.h"
+#import "LFCDManager.h"
+#import "LFSearchWC.h"
 
 @interface LFInputVC ()
 
 @property (strong) IBOutlet NSTextView *theCode;
+@property (strong) IBOutlet NSTextField *statusText;
+@property (strong) IBOutlet NSTextField *amtFuncs;
 @property (strong) LFFunctionScanner *theScanner;
+
+
+@property (strong) LFSearchWC *searchWindow;
 
 @end
 
@@ -29,9 +37,10 @@
 -(IBAction)parseCode:(id)sender
 {
     //clear previous
-        //fuck that atm
+    //fuck that atm
     self.theScanner = [[LFFunctionScanner alloc] init];
     self.theScanner.delegate = self;
+    
     [self.theScanner startScanningText:self.theCode.string];
     
     //show LOADING
@@ -40,19 +49,50 @@
     
 }
 
+-(IBAction)openSearch
+{
+    self.searchWindow = [[LFSearchWC alloc] initWithWindowNibName:@"LFSearchWC"];
+    [self.searchWindow showWindow:self];
+
+}
+-(IBAction)clearDatabase
+{
+    [[LFCDManager sharedManager] deleteAllFunctions];
+}
+
 -(void)prepareScreenForLoading
 {
+    [self.statusText setStringValue:@"Scaaaaannning..."];
+}
+
+#pragma  mark - SCANNING PROTOTCOL
+-(void)scannedFunctionWithData:(NSDictionary *)data
+{
+//    NSString *body = data[@"body"];
+//    NSString *title = data[@"title"];
+//    NSLog(@"Received function withTitle:\n%@\nBody:\n%@",title,body);
+
+    NSString *labelTxt = [NSString stringWithFormat:@"Scaaaaannning...\nFuncs: %ld",(long)self.theScanner.amtOfFunctionsScanned];
+    [self.statusText setStringValue:labelTxt];
+    LFFunction *func = [[LFCDManager sharedManager] newFunctionFromMasterWithData:data];
+
+}
+
+-(void)scanningIsComplete
+{
+    NSString *labelTxt = [NSString stringWithFormat:@"Compleshion!\nFuncs: %ld",(long)self.theScanner.amtOfFunctionsScanned];
+    [self.statusText setStringValue:labelTxt];
+    [[LFCDManager sharedManager] saveMasterContext];
+    [self updateHUD];
     
 }
 
--(void)scannedFunctionWithData:(NSDictionary *)data
+-(void)updateHUD
 {
-    NSString *body = data[@"body"];
-        NSString *title = data[@"title"];
-    NSLog(@"Received function withTitle:\n%@\nBody:\n%@",title,body);
-
+    NSInteger amtOfFuncs = [[[LFCDManager sharedManager] allFunctions] count];
+    NSString *labelTxt = [NSString stringWithFormat:@"Stored funcs: %ld",amtOfFuncs];
+    [self.amtFuncs setStringValue:labelTxt];
 }
-
 
 
 @end

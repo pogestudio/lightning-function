@@ -13,6 +13,9 @@
 		02134C57192B535000D3E0FD /* CDManagerSuperclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C56192B535000D3E0FD /* CDManagerSuperclass.m */; };
 		02134C61192B563E00D3E0FD /* LFFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C60192B563E00D3E0FD /* LFFunction.m */; };
 		02134C64192B576900D3E0FD /* LFFunctionScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C63192B576900D3E0FD /* LFFunctionScanner.m */; };
+		02134C67192B945B00D3E0FD /* LFFunction+helperMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C66192B945B00D3E0FD /* LFFunction+helperMethod.m */; };
+		02134C6B192B9B7100D3E0FD /* LFSearchWC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02134C69192B9B7100D3E0FD /* LFSearchWC.m */; };
+		02134C6C192B9B7100D3E0FD /* LFSearchWC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02134C6A192B9B7100D3E0FD /* LFSearchWC.xib */; };
 		023F0F2C192B391100EBCF90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F0F2B192B391100EBCF90 /* Cocoa.framework */; };
 		023F0F36192B391100EBCF90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 023F0F34192B391100EBCF90 /* InfoPlist.strings */; };
 		023F0F38192B391100EBCF90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F0F37192B391100EBCF90 /* main.m */; };
@@ -49,6 +52,11 @@
 		02134C60192B563E00D3E0FD /* LFFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFunction.m; sourceTree = "<group>"; };
 		02134C62192B576900D3E0FD /* LFFunctionScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFunctionScanner.h; sourceTree = "<group>"; };
 		02134C63192B576900D3E0FD /* LFFunctionScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFunctionScanner.m; sourceTree = "<group>"; };
+		02134C65192B945B00D3E0FD /* LFFunction+helperMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LFFunction+helperMethod.h"; sourceTree = "<group>"; };
+		02134C66192B945B00D3E0FD /* LFFunction+helperMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LFFunction+helperMethod.m"; sourceTree = "<group>"; };
+		02134C68192B9B7100D3E0FD /* LFSearchWC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFSearchWC.h; sourceTree = "<group>"; };
+		02134C69192B9B7100D3E0FD /* LFSearchWC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSearchWC.m; sourceTree = "<group>"; };
+		02134C6A192B9B7100D3E0FD /* LFSearchWC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFSearchWC.xib; sourceTree = "<group>"; };
 		023F0F28192B391100EBCF90 /* LightningFunction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightningFunction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		023F0F2B192B391100EBCF90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		023F0F2E192B391100EBCF90 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -96,6 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				02134C58192B535700D3E0FD /* CoreData */,
+				02134C68192B9B7100D3E0FD /* LFSearchWC.h */,
+				02134C69192B9B7100D3E0FD /* LFSearchWC.m */,
+				02134C6A192B9B7100D3E0FD /* LFSearchWC.xib */,
 				02134C4D192B4F2A00D3E0FD /* LFInputVC.h */,
 				02134C4E192B4F2A00D3E0FD /* LFInputVC.m */,
 				02134C4F192B4F2A00D3E0FD /* LFInputVC.xib */,
@@ -129,6 +140,8 @@
 		02134C5A192B559000D3E0FD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				02134C65192B945B00D3E0FD /* LFFunction+helperMethod.h */,
+				02134C66192B945B00D3E0FD /* LFFunction+helperMethod.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -305,6 +318,7 @@
 				023F0F36192B391100EBCF90 /* InfoPlist.strings in Resources */,
 				02134C51192B4F2A00D3E0FD /* LFInputVC.xib in Resources */,
 				023F0F47192B391200EBCF90 /* Images.xcassets in Resources */,
+				02134C6C192B9B7100D3E0FD /* LFSearchWC.xib in Resources */,
 				023F0F3C192B391100EBCF90 /* Credits.rtf in Resources */,
 				023F0F42192B391200EBCF90 /* MainMenu.xib in Resources */,
 			);
@@ -329,10 +343,12 @@
 				02134C54192B531100D3E0FD /* LFCDManager.m in Sources */,
 				023F0F45192B391200EBCF90 /* LightningFunction.xcdatamodeld in Sources */,
 				02134C50192B4F2A00D3E0FD /* LFInputVC.m in Sources */,
+				02134C67192B945B00D3E0FD /* LFFunction+helperMethod.m in Sources */,
 				02134C57192B535000D3E0FD /* CDManagerSuperclass.m in Sources */,
 				023F0F3F192B391100EBCF90 /* LFAppDelegate.m in Sources */,
 				023F0F38192B391100EBCF90 /* main.m in Sources */,
 				02134C61192B563E00D3E0FD /* LFFunction.m in Sources */,
+				02134C6B192B9B7100D3E0FD /* LFSearchWC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

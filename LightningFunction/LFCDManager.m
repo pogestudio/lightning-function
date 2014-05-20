@@ -21,16 +21,18 @@ static LFCDManager *_sharedManager;
     return _sharedManager;
 }
 
--(id)newFunctionFromBackground
+-(id)newFunctionFromMasterWithData:(NSDictionary *)data
 {
-    LFFunction *function = [self CDObjectFromEntityName:@"LFFunction" inMOC:self.backgroundManagedObjectContext];
+    LFFunction *function = [self CDObjectFromEntityName:@"LFFunction" inMOC:self.masterManagedObjectContext];
     NSAssert([function isKindOfClass:[LFFunction class]], @"wrong class from CD Factory");
+    function.title = data[@"title"];
+    function.body = data[@"body"];
     return function;
 }
 
--(NSFetchRequest*) functionFetchFromBackground
+-(NSFetchRequest*) functionFetchFromMaster
 {
-    NSManagedObjectContext *moc = self.backgroundManagedObjectContext;
+    NSManagedObjectContext *moc = self.masterManagedObjectContext;
     
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"LFFunction" inManagedObjectContext:moc];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -40,7 +42,7 @@ static LFCDManager *_sharedManager;
 
 -(NSArray*)allFunctions
 {
-    NSFetchRequest *request = [self functionFetchFromBackground];
+    NSFetchRequest *request = [self functionFetchFromMaster];
     NSArray *results = [self performFetch:request];
     
     return results;
@@ -53,6 +55,20 @@ static LFCDManager *_sharedManager;
     for (LFFunction *func in allFunc) {
         NSLog(@"Title: %@\nBody:%@", func.title, func.body);
     }
+}
+
+-(void)deleteAllFunctions
+{
+    NSFetchRequest * fetchReq = [self functionFetchFromMaster];
+    [fetchReq setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+    
+    NSArray * funcs = [self performFetch:fetchReq];
+    //error handling goes here
+    for (NSManagedObject * func in funcs) {
+        [self.masterManagedObjectContext deleteObject:func];
+    }
+    NSError *saveError = nil;
+    [self saveMasterContext];
 }
 
 @end

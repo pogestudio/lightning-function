@@ -15,6 +15,8 @@
     NSString *_curScanBody;
 }
 
+
+
 @end
 
 @implementation LFFunctionScanner
@@ -33,6 +35,7 @@
 
 -(void)startScanningText:(NSString *)completeString
 {
+    self.amtOfFunctionsScanned = 0;
     NSUInteger len = [completeString length];
     unichar buffer[len+1];
     
@@ -86,32 +89,33 @@
     
     
     
-        
-        
-        //if it was + or -, and current is (
-        
-        //store the title
-        //start a new string
-        //then store the {
-        //store everything
-        //mark as CONTINUING_FROM_PREVIOUS_FUNC = YES
-        //until you hit +( or -( again
-        
-        //store the last letter
+    
+    
+    //if it was + or -, and current is (
+    
+    //store the title
+    //start a new string
+    //then store the {
+    //store everything
+    //mark as CONTINUING_FROM_PREVIOUS_FUNC = YES
+    //until you hit +( or -( again
+    
+    //store the last letter
+    
+    [self.delegate scanningIsComplete];
 }
 
 -(void)saveBodyFrom:(unichar*)bufferArray betweenPos:(NSInteger)start andPos:(NSInteger)end
 {
-       NSAssert(_lastScannedFunctionTitle, @"Title is nil when saving body");
+    NSAssert(_lastScannedFunctionTitle, @"Title is nil when saving body");
     NSString *body =[self stringFrom:bufferArray betweenPos:start andPos:end];
     NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:_lastScannedFunctionTitle, @"title",body, @"body", nil];
+    self.amtOfFunctionsScanned++;
     [self.delegate scannedFunctionWithData:data];
-    
-    
 }
 -(void)saveTitleFrom:(unichar*)incomingBuffer betweenPos:(NSInteger)start andPos:(NSInteger)end
 {
-
+    
     _lastScannedFunctionTitle = [self stringFrom:incomingBuffer betweenPos:start andPos:end];
 }
 
