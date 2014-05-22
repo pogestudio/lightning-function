@@ -15,7 +15,7 @@
 
 -(id)newFunctionFromMasterWithData:(NSDictionary*)data;
 
--(NSFetchRequest *) functionFetchFromMaster;
+-(NSFetchRequest *) fetchRequestForFunctionFromMaster;
 -(NSArray*)allFunctions;
 
 -(void)listAllFunctions;

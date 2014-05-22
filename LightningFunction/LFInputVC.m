@@ -18,7 +18,6 @@
 @property (strong) IBOutlet NSTextField *amtFuncs;
 @property (strong) LFFunctionScanner *theScanner;
 
-
 @property (strong) LFSearchWC *searchWindow;
 
 @end

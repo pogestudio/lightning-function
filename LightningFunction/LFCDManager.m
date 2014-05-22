@@ -30,7 +30,7 @@ static LFCDManager *_sharedManager;
     return function;
 }
 
--(NSFetchRequest*) functionFetchFromMaster
+-(NSFetchRequest *) fetchRequestForFunctionFromMaster
 {
     NSManagedObjectContext *moc = self.masterManagedObjectContext;
     
@@ -42,7 +42,7 @@ static LFCDManager *_sharedManager;
 
 -(NSArray*)allFunctions
 {
-    NSFetchRequest *request = [self functionFetchFromMaster];
+    NSFetchRequest *request = [self fetchRequestForFunctionFromMaster];
     NSArray *results = [self performFetch:request];
     
     return results;
@@ -59,7 +59,7 @@ static LFCDManager *_sharedManager;
 
 -(void)deleteAllFunctions
 {
-    NSFetchRequest * fetchReq = [self functionFetchFromMaster];
+    NSFetchRequest * fetchReq = [self fetchRequestForFunctionFromMaster];
     [fetchReq setIncludesPropertyValues:NO]; //only fetch the managedObjectID
     
     NSArray * funcs = [self performFetch:fetchReq];
