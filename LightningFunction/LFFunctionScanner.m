@@ -35,6 +35,7 @@
 
 -(void)startScanningText:(NSString *)completeString
 {
+    completeString = [self cleanInput:completeString];
     self.amtOfFunctionsScanned = 0;
     NSUInteger len = [completeString length];
     unichar buffer[len+1];
@@ -129,6 +130,12 @@
     }
     
     return isAFunc;
+}
+
+-(NSString*)cleanInput:(NSString*)thingToClean
+{
+    NSString *clean = [thingToClean stringByReplacingOccurrencesOfString:@"@end" withString:@""];
+    return clean;
 }
 
 @end

@@ -11,12 +11,14 @@
 #import "LFCDManager.h"
 #import "LFSearchWC.h"
 
+
 @interface LFInputVC ()
 
 @property (strong) IBOutlet NSTextView *theCode;
 @property (strong) IBOutlet NSTextField *statusText;
 @property (strong) IBOutlet NSTextField *amtFuncs;
-@property (strong) LFFunctionScanner *theScanner;
+@property (strong) LFFunctionScanner *functionScanner;
+@property (strong) LFFileScanner *fileScanner;
 
 @property (strong) LFSearchWC *searchWindow;
 
@@ -29,23 +31,20 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Initialization code here.
+        
     }
     return self;
 }
 
 -(IBAction)parseCode:(id)sender
 {
-    //clear previous
-    //fuck that atm
-    self.theScanner = [[LFFunctionScanner alloc] init];
-    self.theScanner.delegate = self;
     
-    [self.theScanner startScanningText:self.theCode.string];
+    self.functionScanner = [[LFFunctionScanner alloc] init];
+    self.functionScanner.delegate = self;
     
-    //show LOADING
-    //start to add code
-    //show DONE
-    
+    self.fileScanner = [[LFFileScanner alloc] init];
+    self.fileScanner.delegate = self;
+    [self.fileScanner startScanning];
 }
 
 -(IBAction)openSearch:(id)sender
@@ -65,6 +64,12 @@
     [self.statusText setStringValue:@"Scaaaaannning..."];
 }
 
+#pragma mark - FILE READ PROTOCOL
+-(void)gotStringFromFile:(NSString *)contentsOfFile
+{
+    [self.functionScanner startScanningText:contentsOfFile];
+}
+
 #pragma  mark - SCANNING PROTOTCOL
 -(void)scannedFunctionWithData:(NSDictionary *)data
 {
@@ -72,7 +77,7 @@
 //    NSString *title = data[@"title"];
 //    NSLog(@"Received function withTitle:\n%@\nBody:\n%@",title,body);
 
-    NSString *labelTxt = [NSString stringWithFormat:@"Scaaaaannning...\nFuncs: %ld",(long)self.theScanner.amtOfFunctionsScanned];
+    NSString *labelTxt = [NSString stringWithFormat:@"Scaaaaannning...\nFuncs: %ld",(long)self.functionScanner.amtOfFunctionsScanned];
     [self.statusText setStringValue:labelTxt];
     LFFunction *func = [[LFCDManager sharedManager] newFunctionFromMasterWithData:data];
 
@@ -80,7 +85,7 @@
 
 -(void)scanningIsComplete
 {
-    NSString *labelTxt = [NSString stringWithFormat:@"Compleshion!\nFuncs: %ld",(long)self.theScanner.amtOfFunctionsScanned];
+    NSString *labelTxt = [NSString stringWithFormat:@"Compleshion!\nFuncs: %ld",(long)self.functionScanner.amtOfFunctionsScanned];
     [self.statusText setStringValue:labelTxt];
     [[LFCDManager sharedManager] saveMasterContext];
     [self updateHUD];

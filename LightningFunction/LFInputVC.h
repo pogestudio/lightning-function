@@ -8,7 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "LFFunctionScanner.h"
+#import "LFFileScanner.h"
 
-@interface LFInputVC : NSViewController <ScannerReceiver>
+@interface LFInputVC : NSViewController <ScannerReceiver,FileScannerDelegate>
 
 @end

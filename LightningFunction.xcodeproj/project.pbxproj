@@ -28,6 +28,7 @@
 		023F0F4F192B391200EBCF90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023F0F2B192B391100EBCF90 /* Cocoa.framework */; };
 		023F0F57192B391200EBCF90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 023F0F55192B391200EBCF90 /* InfoPlist.strings */; };
 		023F0F59192B391200EBCF90 /* LightningFunctionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F0F58192B391200EBCF90 /* LightningFunctionTests.m */; };
+		02CF38ED192E8B2D00BF713D /* LFFileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF38EC192E8B2D00BF713D /* LFFileScanner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		023F0F54192B391200EBCF90 /* LightningFunctionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LightningFunctionTests-Info.plist"; sourceTree = "<group>"; };
 		023F0F56192B391200EBCF90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		023F0F58192B391200EBCF90 /* LightningFunctionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightningFunctionTests.m; sourceTree = "<group>"; };
+		02CF38EB192E8B2D00BF713D /* LFFileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFileScanner.h; sourceTree = "<group>"; };
+		02CF38EC192E8B2D00BF713D /* LFFileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFileScanner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +106,11 @@
 		02134C4B192B4E8000D3E0FD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				02CF38EE192E8D6900BF713D /* Scanning */,
 				02134C58192B535700D3E0FD /* CoreData */,
 				02134C68192B9B7100D3E0FD /* LFSearchWC.h */,
 				02134C69192B9B7100D3E0FD /* LFSearchWC.m */,
 				02134C6A192B9B7100D3E0FD /* LFSearchWC.xib */,
-				02134C4D192B4F2A00D3E0FD /* LFInputVC.h */,
-				02134C4E192B4F2A00D3E0FD /* LFInputVC.m */,
-				02134C4F192B4F2A00D3E0FD /* LFInputVC.xib */,
-				02134C62192B576900D3E0FD /* LFFunctionScanner.h */,
-				02134C63192B576900D3E0FD /* LFFunctionScanner.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -238,6 +237,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		02CF38EE192E8D6900BF713D /* Scanning */ = {
+			isa = PBXGroup;
+			children = (
+				02134C4D192B4F2A00D3E0FD /* LFInputVC.h */,
+				02134C4E192B4F2A00D3E0FD /* LFInputVC.m */,
+				02134C4F192B4F2A00D3E0FD /* LFInputVC.xib */,
+				02134C62192B576900D3E0FD /* LFFunctionScanner.h */,
+				02134C63192B576900D3E0FD /* LFFunctionScanner.m */,
+				02CF38EB192E8B2D00BF713D /* LFFileScanner.h */,
+				02CF38EC192E8B2D00BF713D /* LFFileScanner.m */,
+			);
+			name = Scanning;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +356,7 @@
 				02134C54192B531100D3E0FD /* LFCDManager.m in Sources */,
 				023F0F45192B391200EBCF90 /* LightningFunction.xcdatamodeld in Sources */,
 				02134C50192B4F2A00D3E0FD /* LFInputVC.m in Sources */,
+				02CF38ED192E8B2D00BF713D /* LFFileScanner.m in Sources */,
 				02134C67192B945B00D3E0FD /* LFFunction+helperMethod.m in Sources */,
 				02134C57192B535000D3E0FD /* CDManagerSuperclass.m in Sources */,
 				023F0F3F192B391100EBCF90 /* LFAppDelegate.m in Sources */,
